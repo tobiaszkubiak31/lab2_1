@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 class BinarySearchTest {
 
   static private BinarySearch binarySearch;
-  static int key;
+  static private int key;
   static int[] seq;
 
   @BeforeAll
@@ -19,7 +19,7 @@ class BinarySearchTest {
   }
 
   @Test
-  void search_elementIsInSequence_SequenceLengthOne() {
+  void search_elementIsInSequence_sequenceLengthOne() {
     //given
     key = 3;
     seq = new int[]{3};
@@ -32,7 +32,7 @@ class BinarySearchTest {
   }
 
   @Test
-  void search_elementIsNotInSequence_SequenceLengthOne() {
+  void search_elementIsNotInSequence_sequenceLengthOne() {
     key = 1;
     seq = new int[] {2};
 
@@ -42,7 +42,7 @@ class BinarySearchTest {
   }
 
   @Test
-  void search_elementIsInSequenceAsFirstInOrder_SequenceLengthMoreThanOne() {
+  void search_elementIsInSequenceAsFirstInOrder_sequenceLengthMoreThanOne() {
     key = 3;
     seq = new int[] {3,4,5,6,7,8,22};
 
@@ -53,7 +53,7 @@ class BinarySearchTest {
   }
 
   @Test
-  void search_elementIsInSequenceAsLastInOrder_SequenceLengthMoreThanOne() {
+  void search_elementIsInSequenceAsLastInOrder_sequenceLengthMoreThanOne() {
     key = 22;
     seq = new int[] {1,4,6,12,15,21,22};
 
@@ -64,7 +64,7 @@ class BinarySearchTest {
   }
 
   @Test
-  void search_elementIsInSequenceAsMiddleInOrder_SequenceLengthMoreThanOne() {
+  void search_elementIsInSequenceAsMiddleInOrder_sequenceLengthMoreThanOne() {
     key = 6;
     seq = new int[] {3,4,5,6,7,8,22,31};
 
@@ -76,7 +76,7 @@ class BinarySearchTest {
 
 
   @Test
-  void search_elementIsNotInSequence_SequenceLengthMoreThanOne() {
+  void search_elementIsNotInSequence_sequenceLengthMoreThanOne() {
     key = 40;
     seq = new int[] {3,4,5,6,7,8,22,31};
 
@@ -86,7 +86,7 @@ class BinarySearchTest {
   }
 
   @Test
-  void search_elementIsNotInSequenceAndSequence_SequenceLengthIsZero() {
+  void search_elementIsNotInSequenceAndSequence_sequenceLengthIsZero() {
     key = 40;
     seq = new int[] {};
 
