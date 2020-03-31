@@ -85,5 +85,14 @@ class BinarySearchTest {
     assertThat(searchResult.isFound(), is(false));
   }
 
+  @Test
+  void search_elementIsNotInSequenceAndSequence_SequenceLengthIsZero() {
+    key = 40;
+    seq = new int[] {};
+
+    assertThrows(IllegalArgumentException.class, () -> binarySearch.search(key, seq));
+  }
+
+
 
 }
