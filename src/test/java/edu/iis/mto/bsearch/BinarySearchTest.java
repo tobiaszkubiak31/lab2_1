@@ -75,4 +75,15 @@ class BinarySearchTest {
   }
 
 
+  @Test
+  void elementIsNotInSequence_SequenceLengthMoreThanOne() {
+    key = 40;
+    seq = new int[] {3,4,5,6,7,8,22,31};
+
+    SearchResult searchResult = binarySearch.search(key,seq);
+
+    assertFalse(searchResult.isFound());
+  }
+
+
 }
