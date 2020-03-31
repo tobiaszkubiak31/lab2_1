@@ -99,4 +99,14 @@ class BinarySearchTest {
     assertThrows(NullPointerException.class, () -> binarySearch.search(key, null));
   }
 
+  @Test
+  void search_sequenceIsInUnordered() {
+    int key = 25;
+    seq = new int[] {25,5,14};
+    SearchResult searchResult = binarySearch.search(key, seq);
+    assertThat(searchResult.isFound(), is(false));
+  }
+
+
+
 }
