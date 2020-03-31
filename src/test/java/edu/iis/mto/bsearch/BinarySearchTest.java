@@ -1,5 +1,7 @@
 package edu.iis.mto.bsearch;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -28,4 +30,16 @@ class BinarySearchTest {
     //then
     assertTrue(searchResult.isFound());
   }
+
+  @Test
+  void elementIsNotInSequence_SequenceLengthOne() {
+    key = 1;
+    seq = new int[] {2};
+
+    SearchResult searchResult = binarySearch.search(key,seq);
+
+    assertFalse(searchResult.isFound());
+  }
+  
+
 }
