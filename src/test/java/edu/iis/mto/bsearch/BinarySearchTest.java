@@ -28,7 +28,7 @@ class BinarySearchTest {
     var searchResult = binarySearch.search(key, seq);
 
     //then
-    assertTrue(searchResult.isFound());
+    assertThat(searchResult.isFound(), is(true));
   }
 
   @Test
@@ -38,7 +38,7 @@ class BinarySearchTest {
 
     SearchResult searchResult = binarySearch.search(key,seq);
 
-    assertFalse(searchResult.isFound());
+    assertThat(searchResult.isFound(), is(false));
   }
 
   @Test
@@ -48,8 +48,8 @@ class BinarySearchTest {
 
     SearchResult searchResult = binarySearch.search(key,seq);
 
-    assertTrue(searchResult.isFound());
-    assertEquals(1, searchResult.getPosition());
+    assertThat(searchResult.isFound(), is(true));
+    assertThat(searchResult.getPosition(), is(1));
   }
 
   @Test
@@ -59,8 +59,8 @@ class BinarySearchTest {
 
     SearchResult searchResult = binarySearch.search(key,seq);
 
-    assertTrue(searchResult.isFound());
-    assertEquals(seq.length, searchResult.getPosition());
+    assertThat(searchResult.isFound(), is(true));
+    assertThat(searchResult.getPosition(), is(seq.length));
   }
 
   @Test
@@ -70,8 +70,8 @@ class BinarySearchTest {
 
     SearchResult searchResult = binarySearch.search(key,seq);
 
-    assertTrue(searchResult.isFound());
-    assertEquals(seq.length/2, searchResult.getPosition());
+    assertThat(searchResult.isFound(), is(true));
+    assertThat(searchResult.getPosition(), is(seq.length/2));
   }
 
 
@@ -82,7 +82,7 @@ class BinarySearchTest {
 
     SearchResult searchResult = binarySearch.search(key,seq);
 
-    assertFalse(searchResult.isFound());
+    assertThat(searchResult.isFound(), is(false));
   }
 
 
