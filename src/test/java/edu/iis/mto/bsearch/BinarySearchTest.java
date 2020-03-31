@@ -52,5 +52,16 @@ class BinarySearchTest {
     assertEquals(1, searchResult.getPosition());
   }
 
+  @Test
+  void elementIsInSequenceAsLastInOrder_SequenceLengthMoreThanOne() {
+    key = 22;
+    seq = new int[] {1,4,6,12,15,21,22};
+
+    SearchResult searchResult = binarySearch.search(key,seq);
+
+    assertTrue(searchResult.isFound());
+    assertEquals(seq.length, searchResult.getPosition());
+  }
+
 
 }
