@@ -63,5 +63,16 @@ class BinarySearchTest {
     assertEquals(seq.length, searchResult.getPosition());
   }
 
+  @Test
+  void elementIsInSequenceAsMiddleInOrder_SequenceLengthMoreThanOne() {
+    key = 6;
+    seq = new int[] {3,4,5,6,7,8,22,31};
+
+    SearchResult searchResult = binarySearch.search(key,seq);
+
+    assertTrue(searchResult.isFound());
+    assertEquals(seq.length/2, searchResult.getPosition());
+  }
+
 
 }
