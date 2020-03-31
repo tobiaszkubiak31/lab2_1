@@ -40,6 +40,17 @@ class BinarySearchTest {
 
     assertFalse(searchResult.isFound());
   }
-  
+
+  @Test
+  void elementIsInSequenceAsFirstInOrder_SequenceLengthMoreThanOne() {
+    key = 3;
+    seq = new int[] {3,4,5,6,7,8,22};
+
+    SearchResult searchResult = binarySearch.search(key,seq);
+
+    assertTrue(searchResult.isFound());
+    assertEquals(1, searchResult.getPosition());
+  }
+
 
 }
